@@ -52,6 +52,12 @@ echo -e -n "...turn on/off string from examples above..." | cu -l /dev/zstick -s
 
 You need to disable the on-board Bluetooth since the board requires the use of the hardware UART (and there's only one on the Pi3). You do this by adding the following to the end of `/boot/config.txt`:
 
+The simplest way to modify the `/boot/config.txt` is to insert the sd card back into your pc and open it with a file browser.
+
+----------------------------------------
+This first step is the only one required if you are running HassOS on a Raspberry Pi4
+----------------------------------------
+
 ```text
 dtoverlay=pi3-disable-bt
 ```
